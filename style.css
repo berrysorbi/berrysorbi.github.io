@@ -12,14 +12,31 @@
     margin: 0 auto;
     justify-content: center;
 }
-  
+
+
+/*추가된 내용*/
+.fa-brands {
+  color: black;
+  opacity: 0.4
+}
+.fa-solid {
+  color: black;
+  opacity: 0.4
+}
+.sns-pictogram i {
+  margin-right: 40px;
+}
+
+
 .img {
     justify-content: center;
   }
 #porfile-img {
-border: 1px solid #2B3856;
-transform: scale(1); /*이미지 사이즈 고정*/
-border-radius: 70%
+    width: 150px;
+    height: 150px;
+    border: 1px solid #2B3856;
+    transform: scale(1); /*이미지 사이즈 고정*/
+    border-radius: 70%
 }
 
 .text-block {
