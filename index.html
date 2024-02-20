@@ -242,65 +242,32 @@
 
         <script>
             document.addEventListener("DOMContentLoaded", function () {
-                var aboutLink = document.querySelector(
-                    ".menu-bar .click:nth-of-type(1)"
-                );
-                var educationLink = document.querySelector(
-                    ".menu-bar .click:nth-of-type(2)"
-                );
-                var experienceLink = document.querySelector(
-                    ".menu-bar .click:nth-of-type(3)"
-                );
-                var awardsLink = document.querySelector(
-                    ".menu-bar .click:nth-of-type(4)"
-                );
-                var activitiesLink = document.querySelector(
-                    ".menu-bar .click:nth-of-type(5)"
-                );
-                var certificationLink = document.querySelector(
-                    ".menu-bar .click:nth-of-type(6)"
-                );
+                var sectionLinks =
+                    document.querySelectorAll(".menu-bar .click");
 
-                // Add click event listener to the "ABOUT" section
-                aboutLink.addEventListener("click", function () {
-                    document
-                        .querySelector(".about")
-                        .scrollIntoView({ behavior: "smooth" });
-                });
+                // Add click event listener to each section link
+                sectionLinks.forEach(function (link) {
+                    link.addEventListener("click", function () {
+                        // Set opacity to 0.5 for all section links
+                        sectionLinks.forEach(function (otherLink) {
+                            otherLink.style.opacity = "0.7";
+                            otherLink.style.fontSize = "13px";
+                        });
 
-                // Add click event listener to the "EDUCATION" section
-                educationLink.addEventListener("click", function () {
-                    document
-                        .querySelector(".education")
-                        .scrollIntoView({ behavior: "smooth" });
-                });
+                        // Set opacity to 1 for the clicked section link
+                        link.style.opacity = "1";
+                        link.style.fontSize = "15px";
 
-                // Add click event listener to the "EXPERIENCE" section
-                experienceLink.addEventListener("click", function () {
-                    document
-                        .querySelector(".experience")
-                        .scrollIntoView({ behavior: "smooth" });
-                });
-
-                // Add click event listener to the "AWARDS" section
-                awardsLink.addEventListener("click", function () {
-                    document
-                        .querySelector(".awards")
-                        .scrollIntoView({ behavior: "smooth" });
-                });
-
-                // Add click event listener to the "ACTIVITIES" section
-                activitiesLink.addEventListener("click", function () {
-                    document
-                        .querySelector(".activities")
-                        .scrollIntoView({ behavior: "smooth" });
-                });
-
-                // Add click event listener to the "CERTIFICATION & LICENSE" section
-                certificationLink.addEventListener("click", function () {
-                    document
-                        .querySelector(".certification")
-                        .scrollIntoView({ behavior: "smooth" });
+                        // Scroll to the corresponding section smoothly
+                        var sectionClass = link.textContent.toLowerCase();
+                        if (sectionClass == "certification&license") {
+                            sectionClass = "certification";
+                        }
+                        var section = document.querySelector(
+                            "." + sectionClass
+                        );
+                        section.scrollIntoView({ behavior: "smooth" });
+                    });
                 });
             });
         </script>
