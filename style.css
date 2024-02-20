@@ -1,42 +1,39 @@
+:root {
+    --bg-color: #2b3856;
+    --white-font: #ededed;
+}
 
-.row {
-    width: 100%;
-    margin: auto;
+body {
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    gap: 10px;
 }
-
-.row-1 {
-    width: 70%;
-    margin: 0 auto;
-    justify-content: center;
-}
-
 
 /*추가된 내용*/
 .fa-brands {
-  color: black;
-  opacity: 0.4
+    color: black;
+    opacity: 0.4;
 }
 .fa-solid {
-  color: black;
-  opacity: 0.4
+    color: black;
+    opacity: 0.4;
 }
 .sns-pictogram i {
-  margin-right: 40px;
+    margin-right: 40px;
 }
-
 
 .img {
     justify-content: center;
-  }
+}
 #porfile-img {
     width: 150px;
     height: 150px;
-    border: 1px solid #2B3856;
-    transform: scale(1); /*이미지 사이즈 고정*/
-    border-radius: 70%
+    border: none;
+    transform: scale(1);
+    border-radius: 70%;
+    object-fit: cover;
 }
 
 .text-block {
@@ -45,11 +42,11 @@
 .menu-bar {
     position: fixed;
     border: 0;
-    background-color: #2B3856;
+    background-color: var(--bg-color);
     display: block;
     width: 200px;
     height: 100vh;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
@@ -60,25 +57,86 @@
 }
 /* 목차 */
 .index h3 {
-    color: white;
+    color: var(--white-font);
     opacity: 0.7;
     text-decoration: none;
     cursor: pointer;
-  }
-  /* 목차 각 항목 반응형 커서 */
-  .index h3:hover {
-    font-size: 1.1em;
+    font-size: 13px;
+}
+/* 목차 각 항목 반응형 커서 */
+.index h3:hover {
     opacity: 1;
     text-shadow: 0.7px 0.7px 0.7px #000;
-  }
-  section {
+}
+section {
     margin-left: 260px;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-  }
-  p {
+}
+
+p {
+    line-height: 1.5;
     margin: 0;
-  }
-  
+}
+
+.education .one_education {
+    margin-bottom: 15px;
+}
+.education .one_education .date {
+    background-color: var(--bg-color);
+    color: var(--white-font);
+    padding: 3px 5px 3px 5px;
+    border-radius: 5px;
+    width: fit-content;
+    font-size: 12px;
+}
+
+.experience .one_experience {
+    margin-bottom: 15px;
+}
+.experience .one_experience .date {
+    background-color: var(--bg-color);
+    color: var(--white-font);
+    padding: 3px 5px 3px 5px;
+    border-radius: 5px;
+    width: fit-content;
+    font-size: 12px;
+}
+
+.awards .one_award {
+    margin-bottom: 15px;
+}
+.awards .one_award p {
+    padding-left: 30px;
+}
+.awards .one_award .title {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 0;
+}
+
+.activities .one_activity {
+    margin-bottom: 15px;
+}
+.activities .one_activity .date {
+    background-color: var(--bg-color);
+    color: var(--white-font);
+    padding: 3px 5px 3px 5px;
+    border-radius: 5px;
+    width: fit-content;
+    font-size: 12px;
+}
+
+.certification .one_certification {
+    margin-bottom: 15px;
+}
+.certification .one_certification .date {
+    background-color: var(--bg-color);
+    color: var(--white-font);
+    padding: 3px 5px 3px 5px;
+    border-radius: 5px;
+    width: fit-content;
+    font-size: 12px;
+}
