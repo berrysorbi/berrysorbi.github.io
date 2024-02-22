@@ -2,7 +2,6 @@
     --bg-color: #2b3856;
     --white-font: #ededed;
 }
-
 body {
     margin: 0;
     padding: 0;
@@ -72,10 +71,13 @@ body {
 
 section {
     margin-left: 260px;
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+section h1 {
+    display: none;
 }
 
 p {
@@ -141,4 +143,35 @@ p {
     border-radius: 5px;
     width: fit-content;
     font-size: 12px;
+}
+
+@media only screen and (max-width: 480px) {
+    /* query of iphone 13 mini */
+    body {
+        display: flex;
+        flex-direction: column;
+    }
+    .menu-bar {
+        position: relative;
+        width: 100%;
+    }
+    section {
+        margin: 0;
+        padding: 10px;
+        height: none;
+    }
+    section h1 {
+        display: flex;
+        align-items: center;
+        font-size: 22px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    section h1::after {
+        font-family: 'FontAwesome';
+        content: '\f151';
+        font-weight: 100;
+        color: #2b38563f;
+        margin-left: auto;
+    }
 }
