@@ -1,241 +1,324 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <!--Html파일의 인코딩(웹브라우저, 컴퓨터의 HTML파일을 웹브라우저에서 표시될 수 있도록 변환)을 알려주는 태그-->
-        <!--사용하지 않으면 text가 깨질 수 있음-->
         <meta charset="utf-8" />
         <title>sorbi's CV</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!--style.css파일 연결-->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" type="text/css" href="style.css" />
-        <!--폰트 연결-->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap" rel="stylesheet" />
-        <style>
-            * {
-                font-family: 'Roboto Slab', serif;
-            }
-        </style>
-        <!--github-->
         <link
             rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+            integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
         />
     </head>
     <body>
-        <nav class="menu-bar">
-            <div class="index">
-                <div class="img">
-                    <img src="assets/my_img.JPG" id="porfile-img" />
-                </div>
-                <br />
-                <!--목차내용-->
-                <h3 class="click">ABOUT</h3>
-                <h3 class="click">EDUCATION</h3>
-                <h3 class="click">EXPERIENCE</h3>
-                <h3 class="click">AWARDS</h3>
-                <h3 class="click">ACTIVITIES</h3>
-                <h3 class="click">CERTIFICATION<br />&LICENSE</h3>
-            </div>
-        </nav>
-        <div class="container">
-            <section class="about">
-                <!--이름-->
-                <h1>About</h1>
-                <header class="name">
-                    <p>My name is Solbi Han</p>
-                    <!--연락처-->
-                    <div class="contacts">
-                        <p>📞+(82)010-3047-2171</p>
-                        <p>📧 owl9911@dgist.ac.kr</p>
+        <nav>
+            <ul>
+                <li class="nav-header">
+                    <div class="container">
+                        <i class="fa-solid fa-circle"></i>
+                        <p>Sorbi</p>
                     </div>
-                </header>
-                <br /><br />
-                <!--소개글-->
-                <article class="main-introduction">
-                    <p>Hello! My name is Solbi Han.</p>
-                    <br />
-                </article>
-                <footer class="sns-pictogram">
-                    <a href="https://github.com/berrysorbi"
-                        ><i class="fa fa-github" style="font-size: 30px; color: black"></i
-                    ></a>
-                    <a href="https://www.youtube.com/@ggoommani_ssol"
-                        ><i class="fa fa-youtube-play" style="font-size: 30px; color: red"></i
-                    ></a>
-                </footer>
-            </section>
+                </li>
+                <li data-target="home">home</li>
+                <li data-target="about">about</li>
+                <li data-target="education">education</li>
+                <li data-target="experience">experience</li>
+                <li data-target="awards">awards</li>
+                <li data-target="activities">activities</li>
+                <li data-target="certification">certification &amp; license</li>
+            </ul>
+        </nav>
 
-            <section class="education">
-                <h1>Education</h1>
-                <div class="one_education">
-                    <p class="date">Jun.2023 ~</p>
-                    <p>
-                        <b>Daegu Gyeongbuk Institute of Science & Technology, Republic of Korea</b>
-                    </p>
-                    <p>The MS degree in Robotics and Mechatronics Engineering</p>
-                </div>
-                <div class="one_education">
-                    <p class="date">Feb.2018 ~ Jun.2023</p>
-                    <p>
-                        <b>Daegu Gyeongbuk Institute of Science & Technology, Republic of Korea</b>
-                    </p>
-                    <p>The B.S. degree in Transdisciplinary Science</p>
-                </div>
-            </section>
+        <section class="home" id="home">
+            <img src="./assets/my_img.JPG" alt="me!" />
+            <p class="hello">Hello. This is Sorbi Han.</p>
+            <div class="bottom">
+                <p>The MS degree in Robotics and Mechatronics Engineering, DGIST</p>
+                <p>Scroll down.</p>
+            </div>
+        </section>
 
-            <section class="experience">
-                <h1>Experience</h1>
-                <div class="one_experience">
-                    <p class="date">Mar. 2022 ~ Dec. 2022</p>
-                    <p>
-                        <b>Undergraduate researcher, Bio-integrated Electronics Lab</b>
-                    </p>
-                    <p>Bioresorbable glucose sensors research</p>
+        <section id="about">
+            <div class="container">
+                <p class="header">01/ &nbsp;&nbsp; About Me</p>
+                <p class="desc">
+                    Hello! I’m Sorbi Han, a graduate student specializing in robotics with a keen focus on biomedical
+                    engineering. My academic journey merges the fascinating world of robotics with the life-changing
+                    potential of medical technology. I'm passionate about designing and developing advanced robotic
+                    systems that can revolutionize healthcare and improve patient outcomes. From surgical robots to
+                    prosthetic devices, I'm dedicated to exploring how engineering can enhance the quality of human
+                    life. Join me as I delve into the innovative intersection of robotics and medicine!
+                </p>
+                <div class="sns">
+                    <a href="https://www.youtube.com/@ggoommani_ssol" class="snslink" target="_blank"
+                        ><i class="fa-brands fa-youtube"></i>&nbsp;Youtube</a
+                    >
+                    <a href="https://www.instagram.com/so_r_bi/" class="snslink" target="_blank"
+                        ><i class="fa-brands fa-instagram"></i>&nbsp;Instagram</a
+                    >
                 </div>
-                <div class="one_experience">
-                    <p class="date">Jun. 2021 ~ Jul. 2021</p>
-                    <p>
-                        <b>Summer Internship program, Neuro-interfaced Robotics Lab</b>
-                    </p>
-                    <p>Neural Devices for Electroceuticals research</p>
-                </div>
-                <div class="one_experience">
-                    <p class="date">Apr. 2021 ~ Nov. 2021</p>
-                    <p><b>Undergraduate Group Research Program (UGRP)</b></p>
-                    <p>Production of a motion bed that detects the movement of infants and toddlers while sleeping</p>
-                </div>
-                <div class="one_experience">
-                    <p class="date">Feb. 2021 ~ Apr. 2021</p>
-                    <p>
-                        <b>Undergraduate researcher, Soft Bioelectronics Lab</b>
-                    </p>
-                    <p>Fiber strain sensors research</p>
-                </div>
-                <div class="one_experience">
-                    <p class="date">Jan. 2021 ~ Feb. 2021</p>
-                    <p>
-                        <b>Winter Internship program, Soft Bioelectronics Lab</b>
-                    </p>
-                    <p>Stretchable electronics research</p>
-                </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="awards">
-                <h1>Awards</h1>
-                <div class="one_award">
-                    <p class="title">The 48th Jangbogo's Cup National Rowing Competition (2022)</p>
-                    <p>Man's 4+ 1st(as a cox)</p>
-                    <p>Mixed gender 4+ 1st</p>
+        <section id="education">
+            <div class="container">
+                <p class="header">02/ &nbsp;&nbsp; Education</p>
+                <div class="timeline">
+                    <div class="one-tl">
+                        <div class="circle"></div>
+                        <div class="content">The MS degree in Robotics and Mechatronics Engineering</div>
+                        <div class="place">Daegu Gyeongbuk Institute of Science & Technology, Republic of Korea</div>
+                        <div class="duration">Jun.2023 ~</div>
+                    </div>
+                    <div class="one-tl">
+                        <div class="circle"></div>
+                        <div class="content">The B.S. degree in Transdisciplinary Science</div>
+                        <div class="place">Daegu Gyeongbuk Institute of Science & Technology, Republic of Korea</div>
+                        <div class="duration">Feb.2018 ~ Jun.2023</div>
+                    </div>
                 </div>
-                <div class="one_award">
-                    <p class="title">
-                        The 3rd Science and Technology Specialized University Friendship Rowing Game (2019)
-                    </p>
-                    <p>Woman's 4+ 2nd</p>
-                    <p>overall championship</p>
-                </div>
-                <div class="one_award">
-                    <p class="title">The 5th Chungju Mayor's Cup National Rowing Competition (2019)</p>
-                    <p>Man's 4+ 1st(as a cox)</p>
-                </div>
-                <div class="one_award">
-                    <p class="title">The 45th Jangbogo's Cup National Rowing Competition (2019)</p>
-                    <p>Woman's 4+ 2nd</p>
-                    <p>Woman's rowing machine relay 3rd</p>
-                    <p>Man's 4+ 1st(as a cox)</p>
-                    <p>Man's 8+ 1st(as a cox)</p>
-                    <p>overall championship & Minister of Oceans and Fisheries Award</p>
-                </div>
-                <div class="one_award">
-                    <p class="title">DGIST World-class University Rowing Festival (2018)</p>
-                    <p>Convergence Team 12km Water Marathon 2nd</p>
-                </div>
-                <div class="one_award">
-                    <p class="title">the 14th University Rowing Competition (2018)</p>
-                    <p>Woman's 4+ 3rd</p>
-                    <p>overall championship</p>
-                </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="activities">
-                <h1>Activities</h1>
-                <div class="one_activity">
-                    <p class="date">Dec. 2021 ~ Feb. 2022</p>
-                    <p>Working scholarship students (working at the Achieved Children's Center)</p>
+        <section id="experience">
+            <div class="container">
+                <div class="header">03/ &nbsp;&nbsp; Experience</div>
+                <div class="view-box">
+                    <div class="one-card">
+                        <div class="title">Bioresorbable glucose sensors research</div>
+                        <div class="content">Undergraduate researcher, Bio-integrated Electronics Lab.</div>
+                        <div class="duration">Mar. 2022 ~ Dec. 2022</div>
+                    </div>
+                    <div class="one-card">
+                        <div class="title">Neural Devices for Electroceuticals research</div>
+                        <div class="content">Summer Internship program, Neuro-interfaced Robotics Lab.</div>
+                        <div class="duration">Jun. 2021 ~ Jul. 2021</div>
+                    </div>
+                    <div class="one-card">
+                        <div class="title">
+                            Production of a motion bed that detects the movement of infants and toddlers while sleeping
+                        </div>
+                        <div class="content">Undergraduate Group Research Program (UGRP)</div>
+                        <div class="duration">Apr. 2021 ~ Nov. 2021</div>
+                    </div>
+                    <div class="one-card">
+                        <div class="title">Fiber strain sensors research</div>
+                        <div class="content">Undergraduate researcher, Soft Bioelectronics Lab.</div>
+                        <div class="duration">Feb. 2021 ~ Apr. 2021</div>
+                    </div>
+                    <div class="one-card">
+                        <div class="title">Bioresorbable glucose sensors research</div>
+                        <div class="content">Undergraduate researcher, Bio-integrated Electronics Lab.</div>
+                        <div class="duration">Mar. 2022 ~ Dec. 2022</div>
+                    </div>
+                    <div class="one-card">
+                        <div class="title">Stretchable electronics research</div>
+                        <div class="content">Winter Internship program, Soft Bioelectronics Lab.</div>
+                        <div class="duration">Jan. 2021 ~ Feb. 2021</div>
+                    </div>
                 </div>
-                <div class="one_activity">
-                    <p class="date">Mar. 2021~ Dec. 2021</p>
-                    <p>Daegu Youth Support Group 'Danbi'</p>
-                </div>
-                <div class="one_activity">
-                    <p class="date">Oct. 2019 ~ Nov. 2019</p>
-                    <p>Completed the pilgrimage to Santiago(799km)</p>
-                </div>
-                <div class="one_activity">
-                    <p class="date">Mar. 2019</p>
-                    <p>Foundation of DGIST Cat-care Club</p>
-                </div>
-                <div class="one_activity">
-                    <p class="date">Aug. 2018</p>
-                    <p>Mentor of Incheon well-Knowing Walking Camp</p>
-                </div>
-            </section>
+            </div>
+        </section>
 
-            <section class="certification">
-                <h1>Certification & License</h1>
-                <div class="one_certification">
-                    <p class="date">Dec. 2023</p>
-                    <p>Early Childhood Sports Instructor's Certificate (boxing)</p>
+        <section id="awards">
+            <div class="container">
+                <div class="header">04/ &nbsp;&nbsp; Awards</div>
+                <div class="view-box">
+                    <div class="one-award">
+                        <div class="prize">
+                            <img src="./assets/prize.svg" alt="prize" />
+                            <p class="rank">1</p>
+                        </div>
+                        <div class="compet">The 48th Jangbogo's Cup National Rowing Competition (2022)</div>
+                        <div class="entry">Man's 4+ (as a cox)</div>
+                    </div>
+                    <div class="one-award">
+                        <div class="prize">
+                            <img src="./assets/prize.svg" alt="prize" />
+                            <p class="rank">1</p>
+                        </div>
+                        <div class="compet">The 48th Jangbogo's Cup National Rowing Competition (2022)</div>
+                        <div class="entry">Mixed gender 4+</div>
+                    </div>
+                    <div class="one-award">
+                        <div class="prize">
+                            <img src="./assets/prize.svg" alt="prize" />
+                            <p class="rank">2</p>
+                        </div>
+                        <div class="compet">
+                            The 3rd Science and Technology Specialized University Friendship Rowing Game (2019)
+                        </div>
+                        <div class="entry">Woman's 4+</div>
+                    </div>
+                    <div class="one-award">
+                        <div class="prize">
+                            <img src="./assets/prize.svg" alt="prize" />
+                            <p class="rank">1</p>
+                        </div>
+                        <div class="compet">
+                            The 3rd Science and Technology Specialized University Friendship Rowing Game (2019)
+                        </div>
+                        <div class="entry">overall championship</div>
+                    </div>
+
+                    <div class="one-award">
+                        <div class="prize">
+                            <img src="./assets/prize.svg" alt="prize" />
+                            <p class="rank">1</p>
+                        </div>
+                        <div class="compet">The 5th Chungju Mayor's Cup National Rowing Competition (2019)</div>
+                        <div class="entry">Man's 4+(as a cox)</div>
+                    </div>
+
+                    <div class="one-award">
+                        <div class="prize">
+                            <img src="./assets/prize.svg" alt="prize" />
+                            <p class="rank">2</p>
+                        </div>
+                        <div class="compet">The 45th Jangbogo's Cup National Rowing Competition (2019)</div>
+                        <div class="entry">Woman's 4+</div>
+                    </div>
+                    <div class="one-award">
+                        <div class="prize">
+                            <img src="./assets/prize.svg" alt="prize" />
+                            <p class="rank">3</p>
+                        </div>
+                        <div class="compet">The 45th Jangbogo's Cup National Rowing Competition (2019)</div>
+                        <div class="entry">Woman's rowing machine relay</div>
+                    </div>
+                    <div class="one-award">
+                        <div class="prize">
+                            <img src="./assets/prize.svg" alt="prize" />
+                            <p class="rank">1</p>
+                        </div>
+                        <div class="compet">The 45th Jangbogo's Cup National Rowing Competition (2019)</div>
+                        <div class="entry">Man's 4+(as a cox)</div>
+                    </div>
+                    <div class="one-award">
+                        <div class="prize">
+                            <img src="./assets/prize.svg" alt="prize" />
+                            <p class="rank">1</p>
+                        </div>
+                        <div class="compet">The 45th Jangbogo's Cup National Rowing Competition (2019)</div>
+                        <div class="entry">Man's 8+(as a cox)</div>
+                    </div>
+                    <div class="one-award">
+                        <div class="prize">
+                            <img src="./assets/prize.svg" alt="prize" />
+                            <p class="rank">1</p>
+                        </div>
+                        <div class="compet">The 45th Jangbogo's Cup National Rowing Competition (2019)</div>
+                        <div class="entry">overall championship & Minister of Oceans and Fisheries Award</div>
+                    </div>
+
+                    <div class="one-award">
+                        <div class="prize">
+                            <img src="./assets/prize.svg" alt="prize" />
+                            <p class="rank">2</p>
+                        </div>
+                        <div class="compet">DGIST World-class University Rowing Festival (2018)</div>
+                        <div class="entry">Convergence Team 12km Water Marathon</div>
+                    </div>
+
+                    <div class="one-award">
+                        <div class="prize">
+                            <img src="./assets/prize.svg" alt="prize" />
+                            <p class="rank">3</p>
+                        </div>
+                        <div class="compet">the 14th University Rowing Competition (2018)</div>
+                        <div class="entry">Woman's 4+</div>
+                    </div>
+                    <div class="one-award">
+                        <div class="prize">
+                            <img src="./assets/prize.svg" alt="prize" />
+                            <p class="rank">1</p>
+                        </div>
+                        <div class="compet">the 14th University Rowing Competition (2018)</div>
+                        <div class="entry">overall championship</div>
+                    </div>
                 </div>
-                <div class="one_certification">
-                    <p class="date">Dec. 2022</p>
-                    <p>Second-class sports instructor's certificate (boxing)</p>
-                </div>
-                <div class="one_certification">
-                    <p class="date">Dec. 2020</p>
-                    <p>Early Childhood Sports Instructor's Certificate (Rowing)</p>
-                </div>
-                <div class="one_certification">
-                    <p class="date">Mar. 2020</p>
-                    <p>Driver's license, Korea</p>
-                </div>
-            </section>
-        </div>
+            </div>
+        </section>
+
+        <section id="activities">
+            <div class="container">
+                <div class="header">05/ &nbsp;&nbsp; Activities</div>
+                Dec. 2021 ~ Feb. 2022 <br />
+                Working scholarship students (working at the Achieved Children's Center) <br />
+
+                Mar. 2021~ Dec. 2021 <br />
+                Daegu Youth Support Group 'Danbi' <br />
+
+                Oct. 2019 ~ Nov. 2019 <br />
+                Completed the pilgrimage to Santiago(799km) <br />
+
+                Mar. 2019 <br />
+                Foundation of DGIST Cat-care Club <br />
+
+                Aug. 2018 <br />
+                Mentor of Incheon well-Knowing Walking Camp
+            </div>
+        </section>
+
+        <section id="certification">
+            <div class="container">
+                <div class="header">06/ &nbsp;&nbsp; Certification &amp; License</div>
+                Dec. 2023 <br />
+                Early Childhood Sports Instructor's Certificate (boxing)<br />
+
+                Dec. 2022<br />
+                Second-class sports instructor's certificate (boxing)<br />
+
+                Dec. 2020<br />
+                Early Childhood Sports Instructor's Certificate (Rowing)<br />
+
+                Mar. 2020<br />
+                Driver's license, Korea
+            </div>
+        </section>
 
         <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                var sectionLinks = document.querySelectorAll('.menu-bar .click');
+            // 섹션과 네비게이션 항목을 연결
+            const sections = document.querySelectorAll('section');
+            const navItems = document.querySelectorAll('nav ul li[data-target]');
 
-                // Add click event listener to each section link
-                sectionLinks.forEach(function (link) {
-                    link.addEventListener('click', function () {
-                        // Set opacity to 0.5 for all section links
-                        sectionLinks.forEach(function (otherLink) {
-                            otherLink.style.opacity = '0.7';
-                            otherLink.style.fontSize = '13px';
-                        });
+            // IntersectionObserver 옵션
+            const options = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5, // 화면에 50% 이상 보일 때 트리거
+            };
 
-                        // Set opacity to 1 for the clicked section link
-                        link.style.opacity = '1';
-                        link.style.fontSize = '15px';
+            // IntersectionObserver 콜백 함수
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    const targetId = entry.target.getAttribute('id');
+                    const navItem = document.querySelector(`nav ul li[data-target="${targetId}"]`);
 
-                        // Scroll to the corresponding section smoothly
-                        var sectionClass = link.textContent.toLowerCase();
-                        if (sectionClass == 'certification&license') {
-                            sectionClass = 'certification';
-                        }
-                        var section = document.querySelector('.' + sectionClass);
-                        section.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    });
+                    if (entry.isIntersecting) {
+                        navItem.classList.add('active');
+                    } else {
+                        navItem.classList.remove('active');
+                    }
                 });
+            }, options);
 
-                var sectionH1s = document.querySelectorAll('section h1');
-                sectionH1s.forEach(function (h) {
-                    h.addEventListener('click', function () {
-                        window.scrollTo({ top: 0, behavior: 'smooth' });
-                    });
+            // 각 섹션에 대해 Observer 적용
+            sections.forEach((section) => {
+                observer.observe(section);
+            });
+
+            // 네비게이션 클릭 시 스크롤 이동
+            navItems.forEach((item) => {
+                item.addEventListener('click', function () {
+                    const targetId = this.getAttribute('data-target');
+                    const targetElement = document.getElementById(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                    }
                 });
             });
         </script>

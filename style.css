@@ -1,177 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 :root {
-    --bg-color: #2b3856;
-    --white-font: #ededed;
+    --dark: rgb(20, 21, 24);
+    --semi-dark: rgb(49, 48, 49);
+    --gray: rgb(182, 187, 196);
+    --white: rgb(230, 236, 229);
+    --highlight: rgb(222, 159, 246);
 }
-body {
+
+* {
+    box-sizing: border-box;
+    background-color: transparent;
     margin: 0;
     padding: 0;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+body {
+    background-color: var(--dark);
+    color: var(--white);
+}
+
+nav {
+    position: fixed;
+    top: 1.6em;
+    left: 2em;
+}
+nav ul {
+    list-style: none;
+}
+nav ul li {
+    cursor: pointer;
+    list-style: none;
+    font-size: 0.8em;
+    text-transform: capitalize;
+    position: relative;
+    left: 2.1em;
+    line-height: 1.5;
+    font-family: 'Xanh Mono', monospace;
+    color: var(--gray);
+}
+nav ul li.active {
+    color: var(--white);
+}
+nav ul li.nav-header {
+    left: 0;
+    margin-bottom: 0.5em;
+}
+nav ul li.nav-header .container {
     display: flex;
     flex-direction: row;
-    gap: 10px;
-}
-
-/*추가된 내용*/
-.fa-brands {
-    color: black;
-    opacity: 0.4;
-}
-.fa-solid {
-    color: black;
-    opacity: 0.4;
-}
-.sns-pictogram i {
-    margin-right: 40px;
-}
-
-.img {
-    justify-content: center;
-}
-#porfile-img {
-    width: 150px;
-    height: 150px;
-    border: none;
-    transform: scale(1);
-    border-radius: 70%;
-    object-fit: cover;
-}
-
-.text-block {
-    width: 60%;
-}
-.menu-bar {
-    position: fixed;
-    border: 0;
-    background-color: var(--bg-color);
-    display: block;
-    width: 200px;
-    height: 100vh;
-    display: flex;
     align-items: center;
-    justify-content: center;
+    gap: 1.2em;
 }
-.index {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+nav ul li.nav-header .container i {
+    color: var(--semi-dark);
+    font-size: 0.8em;
 }
-/* 목차 */
-.index h3 {
-    color: var(--white-font);
-    opacity: 0.7;
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 13px;
-}
-/* 목차 각 항목 반응형 커서 */
-.index h3:hover {
-    opacity: 1;
-    text-shadow: 0.7px 0.7px 0.7px #000;
-    font-size: 15px;
+nav ul li.nav-header .container p {
+    font-size: 1.25em;
+    font-weight: 500;
+    color: var(--white);
 }
 
 section {
-    margin-left: 260px;
     min-height: 100vh;
+}
+
+.home {
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
-section h1 {
-    display: none;
+.home img {
+    position: absolute;
+    left: 50%;
+    width: 260px;
+    height: 260px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+.home p.hello {
+    z-index: 100;
+    font-size: 3em;
+    margin-top: calc(50vh - 1em);
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid;
+    animation: typing 3s steps(30, end) forwards, blink 0.75s step-end infinite;
+}
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 500px;
+    }
 }
 
-p {
-    line-height: 1.5;
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+.home .bottom {
+    margin-top: auto;
+    margin-bottom: 1em;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.home .bottom p {
+    color: var(--gray);
+    font-size: 0.8em;
     margin: 0;
 }
 
-.education .one_education {
-    margin-bottom: 15px;
+#about {
+    padding: 2em 1em;
 }
-.education .one_education .date {
-    background-color: var(--bg-color);
-    color: var(--white-font);
-    padding: 3px 5px 3px 5px;
-    border-radius: 5px;
-    width: fit-content;
-    font-size: 12px;
+#about .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-top: 25vh;
 }
-
-.experience .one_experience {
-    margin-bottom: 15px;
+#about .container .header {
+    font-size: 2em;
+    font-weight: 900;
+    margin-bottom: 0.5em;
 }
-.experience .one_experience .date {
-    background-color: var(--bg-color);
-    color: var(--white-font);
-    padding: 3px 5px 3px 5px;
-    border-radius: 5px;
-    width: fit-content;
-    font-size: 12px;
+#about .container .desc {
+    width: 50%;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    word-spacing: 0.27em;
 }
-
-.awards .one_award {
-    margin-bottom: 15px;
+#about .container .sns {
+    margin-top: 2em;
+    display: flex; /* Flexbox를 사용하여 한 줄에 배치 */
+    gap: 10px; /* 링크들 사이의 간격 설정 */
 }
-.awards .one_award p {
-    padding-left: 30px;
+#about .container .snslink {
+    background-color: #f1f1f1; /* 링크 배경색 */
+    padding: 7px 12px; /* 링크 내부 여백 */
+    border-radius: 5px; /* 모서리 둥글게 */
+    text-decoration: none; /* 링크의 밑줄 제거 */
+    color: var(--dark); /* 텍스트 색상 */
+    transition: background-color 0.3s; /* 마우스 오버 시 배경색 전환 */
 }
-.awards .one_award .title {
-    font-weight: bold;
-    font-size: 16px;
-    padding: 0;
-}
-
-.activities .one_activity {
-    margin-bottom: 15px;
-}
-.activities .one_activity .date {
-    background-color: var(--bg-color);
-    color: var(--white-font);
-    padding: 3px 5px 3px 5px;
-    border-radius: 5px;
-    width: fit-content;
-    font-size: 12px;
+#about .container .snslink:hover {
+    background-color: var(--highlight); /* 마우스 오버 시 배경색 */
 }
 
-.certification .one_certification {
-    margin-bottom: 15px;
+#education {
+    padding: 2em 1em;
 }
-.certification .one_certification .date {
-    background-color: var(--bg-color);
-    color: var(--white-font);
-    padding: 3px 5px 3px 5px;
-    border-radius: 5px;
-    width: fit-content;
-    font-size: 12px;
+#education .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-top: 25vh;
+}
+#education .container .header {
+    font-size: 2em;
+    font-weight: 900;
+    margin-bottom: 0.5em;
+}
+#education .container .timeline {
+    border-left: 0.25px solid var(--white);
+    height: 50vh;
+    padding-left: 1em;
+}
+#education .container .timeline .one-tl {
+    margin-bottom: 2em;
+}
+#education .container .timeline .circle {
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+    background-color: var(--highlight);
+}
+#education .container .timeline .one-tl:nth-of-type(n + 2) .circle {
+    background-color: var(--gray);
+}
+#education .container .timeline .place {
+    font-size: 0.75em;
+    color: var(--gray);
+    line-height: 1.75;
+}
+#education .container .timeline .duration {
+    font-size: 0.75em;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.75;
 }
 
-@media only screen and (max-width: 767px){
-    /* query of iphone 13 mini */
-    body {
-        display: flex;
-        flex-direction: column;
-    }
-    .menu-bar {
-        position: relative;
-        width: 100%;
-    }
-    section {
-        margin: 0;
-        padding: 10px;
-        height: none;
-    }
-    section h1 {
-        display: flex;
-        align-items: center;
-        font-size: 22px;
-        font-weight: bold;
-        text-transform: uppercase;
-    }
-    section h1::after {
-        font-family: 'FontAwesome';
-        content: '\f151';
-        font-weight: 100;
-        color: #2b38563f;
-        margin-left: auto;
-    }
+#experience {
+    padding: 2em 1em;
+}
+#experience .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-top: 25vh;
+}
+#experience .container .header {
+    font-size: 2em;
+    font-weight: 900;
+    margin-bottom: 1em;
+}
+#experience .container .view-box {
+    width: 100%;
+    display: grid;
+    grid-auto-flow: column;
+    gap: 1em;
+    overflow: hidden;
+    overflow-x: scroll;
+}
+#experience .container .view-box .one-card {
+    min-width: 150px;
+    height: fit-content;
+    padding: 20px 10px;
+    border-radius: 10px;
+    color: var(--dark);
+    background-color: var(--white);
+}
+#experience .container .view-box .one-card .title {
+    font-weight: 900;
+    font-size: 1.25em;
+}
+#experience .container .view-box .one-card .content {
+    font-size: 0.75em;
+    font-weight: 300;
+    line-height: 1.75;
+}
+#experience .container .view-box .one-card .duration {
+    font-size: 0.75em;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.75;
+}
+
+#awards {
+    padding: 2em 1em;
+}
+#awards .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-top: 25vh;
+}
+#awards .container .header {
+    font-size: 2em;
+    font-weight: 900;
+    margin-bottom: 1em;
+}
+#awards .container .view-box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+}
+#awards .container .view-box .one-award {
+    text-align: center;
+}
+#awards .container .view-box .one-award .prize {
+    position: relative;
+}
+#awards .container .view-box .one-award .prize img {
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+    filter: invert(100%) brightness(200%);
+}
+#awards .container .view-box .one-award .prize .rank {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    font-size: 5em;
+}
+#awards .container .view-box .one-award .compet {
+    font-weight: 700;
+}
+#awards .container .view-box .one-award .entry {
+    font-size: 0.75em;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.75;
+}
+
+#activities {
+    padding: 2em 1em;
+}
+#activities .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-top: 25vh;
+}
+#activities .container .header {
+    font-size: 2em;
+    font-weight: 900;
+    margin-bottom: 0.5em;
+}
+
+#certification {
+    padding: 2em 1em;
+}
+#certification .container {
+    max-width: 1024px;
+    margin: 0 auto;
+    padding-top: 25vh;
+}
+#certification .container .header {
+    font-size: 2em;
+    font-weight: 900;
+    margin-bottom: 0.5em;
 }
