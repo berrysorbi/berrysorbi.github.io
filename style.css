@@ -1,12 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Xanh+Mono:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
+/* dark mdoe */
 :root {
     --dark: rgb(20, 21, 24);
     --semi-dark: rgb(49, 48, 49);
     --gray: rgb(182, 187, 196);
     --white: rgb(230, 236, 229);
+    --highlight: rgb(222, 159, 246);
+}
+/* white mode */
+:root.white-mode {
+    --dark: rgb(240, 240, 240);
+    --semi-dark: rgb(180, 180, 180);
+    --gray: rgb(100, 100, 100);
+    --white: rgb(49, 48, 49);
     --highlight: rgb(222, 159, 246);
 }
 
@@ -30,6 +38,7 @@ nav {
     left: 2em;
 }
 nav ul {
+    z-index: 999;
     list-style: none;
 }
 nav ul li {
@@ -141,21 +150,31 @@ section {
     font-family: 'Open Sans', sans-serif;
     word-spacing: 0.27em;
 }
+#about .container .contact {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+#about .container .contact .one-c {
+    font-weight: 400;
+    word-spacing: 0.1em;
+}
 #about .container .sns {
     margin-top: 2em;
-    display: flex; /* Flexbox를 사용하여 한 줄에 배치 */
-    gap: 10px; /* 링크들 사이의 간격 설정 */
+    display: flex;
+    gap: 10px;
 }
 #about .container .snslink {
-    background-color: #f1f1f1; /* 링크 배경색 */
-    padding: 7px 12px; /* 링크 내부 여백 */
-    border-radius: 5px; /* 모서리 둥글게 */
-    text-decoration: none; /* 링크의 밑줄 제거 */
-    color: var(--dark); /* 텍스트 색상 */
-    transition: background-color 0.3s; /* 마우스 오버 시 배경색 전환 */
+    background-color: var(--white);
+    padding: 7px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--dark);
+    transition: background-color 0.3s;
 }
 #about .container .snslink:hover {
-    background-color: var(--highlight); /* 마우스 오버 시 배경색 */
+    background-color: var(--highlight);
 }
 
 #education {
@@ -308,6 +327,15 @@ section {
     font-weight: 900;
     margin-bottom: 0.5em;
 }
+#activities .container .one-activity {
+    margin-bottom: 2em;
+}
+#activities .container .one-activity .duration {
+    font-size: 0.75em;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.75;
+}
 
 #certification {
     padding: 2em 1em;
@@ -320,5 +348,60 @@ section {
 #certification .container .header {
     font-size: 2em;
     font-weight: 900;
-    margin-bottom: 0.5em;
+    margin-bottom: 1em;
+}
+#certification .container .certilist {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 1em;
+}
+#certification .container .one-certi img {
+    width: 100%;
+}
+#certification .container .one-certi .duration {
+    font-size: 0.75em;
+    font-weight: 300;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.75;
+}
+
+@media only screen and (max-width: 768px) {
+    nav ul li {
+        display: none;
+    }
+    nav ul li.nav-header {
+        display: list-item;
+    }
+    .home p.hello {
+        width: 90%;
+        word-break: break-all;
+        font-size: 2em;
+    }
+    .home img {
+        width: 40vw;
+        height: calc(40vw + 50px);
+    }
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 90%;
+        }
+    }
+    #about .container .desc {
+        width: 100%;
+    }
+    #awards .container .view-box {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    #awards .container .view-box .one-award .prize .rank {
+        font-size: 3em;
+    }
+    #certification .container .certilist {
+        grid-template-columns: none;
+        grid-template-rows: none;
+    }
 }

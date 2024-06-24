@@ -52,6 +52,16 @@
                     prosthetic devices, I'm dedicated to exploring how engineering can enhance the quality of human
                     life. Join me as I delve into the innovative intersection of robotics and medicine!
                 </p>
+                <div class="contact">
+                    <div class="one-c">
+                        <i class="fa-solid fa-envelope"></i>
+                        owl9911@dgist.ac.kr
+                    </div>
+                    <div class="one-c">
+                        <i class="fa-solid fa-globe"></i>
+                        E5, 333, Techno Jungang-daero, Hyeonpung-eup, Dalseong-gun, Daegu, 42988, Republic of Korea
+                    </div>
+                </div>
                 <div class="sns">
                     <a href="https://www.youtube.com/@ggoommani_ssol" class="snslink" target="_blank"
                         ><i class="fa-brands fa-youtube"></i>&nbsp;Youtube</a
@@ -246,81 +256,60 @@
         <section id="activities">
             <div class="container">
                 <div class="header">05/ &nbsp;&nbsp; Activities</div>
-                Dec. 2021 ~ Feb. 2022 <br />
-                Working scholarship students (working at the Achieved Children's Center) <br />
-
-                Mar. 2021~ Dec. 2021 <br />
-                Daegu Youth Support Group 'Danbi' <br />
-
-                Oct. 2019 ~ Nov. 2019 <br />
-                Completed the pilgrimage to Santiago(799km) <br />
-
-                Mar. 2019 <br />
-                Foundation of DGIST Cat-care Club <br />
-
-                Aug. 2018 <br />
-                Mentor of Incheon well-Knowing Walking Camp
+                <div class="one-activity">
+                    <p class="duration">Dec. 2021 ~ Feb. 2022</p>
+                    <p class="activity">Working scholarship students (working at the Achieved Children's Center)</p>
+                </div>
+                <div class="one-activity">
+                    <p class="duration">Mar. 2021~ Dec. 2021</p>
+                    <p class="activity">Daegu Youth Support Group 'Danbi'</p>
+                </div>
+                <div class="one-activity">
+                    <p class="duration">Oct. 2019 ~ Nov. 2019</p>
+                    <p class="activity">Completed the pilgrimage to Santiago(799km)</p>
+                </div>
+                <div class="one-activity">
+                    <p class="duration">Mar. 2019</p>
+                    <p class="activity">Foundation of DGIST Cat-care Club</p>
+                </div>
+                <div class="one-activity">
+                    <p class="duration">Aug. 2018</p>
+                    <p class="activity">Mentor of Incheon well-Knowing Walking Camp</p>
+                </div>
             </div>
         </section>
 
         <section id="certification">
             <div class="container">
                 <div class="header">06/ &nbsp;&nbsp; Certification &amp; License</div>
-                Dec. 2023 <br />
-                Early Childhood Sports Instructor's Certificate (boxing)<br />
+                <div class="certilist">
+                    <div class="one-certi">
+                        <p class="duration">Dec. 2023</p>
+                        <p class="activity">Early Childhood Sports Instructor's Certificate (boxing)</p>
+                    </div>
 
-                Dec. 2022<br />
-                Second-class sports instructor's certificate (boxing)<br />
+                    <div class="one-certi">
+                        <p class="duration">Dec. 2022</p>
+                        <p class="activity">Second-class sports instructor's certificate (boxing)</p>
+                    </div>
 
-                Dec. 2020<br />
-                Early Childhood Sports Instructor's Certificate (Rowing)<br />
+                    <div class="one-certi">
+                        <p class="duration">Dec. 2020</p>
+                        <p class="activity">Early Childhood Sports Instructor's Certificate (Rowing)</p>
+                    </div>
 
-                Mar. 2020<br />
-                Driver's license, Korea
+                    <div class="one-certi">
+                        <p class="duration">Mar. 2020</p>
+                        <p class="activity">Driver's license, Korea</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <script>
-            // 섹션과 네비게이션 항목을 연결
-            const sections = document.querySelectorAll('section');
-            const navItems = document.querySelectorAll('nav ul li[data-target]');
+        <footer>email</footer>
 
-            // IntersectionObserver 옵션
-            const options = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.5, // 화면에 50% 이상 보일 때 트리거
-            };
-
-            // IntersectionObserver 콜백 함수
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach((entry) => {
-                    const targetId = entry.target.getAttribute('id');
-                    const navItem = document.querySelector(`nav ul li[data-target="${targetId}"]`);
-
-                    if (entry.isIntersecting) {
-                        navItem.classList.add('active');
-                    } else {
-                        navItem.classList.remove('active');
-                    }
-                });
-            }, options);
-
-            // 각 섹션에 대해 Observer 적용
-            sections.forEach((section) => {
-                observer.observe(section);
-            });
-
-            // 네비게이션 클릭 시 스크롤 이동
-            navItems.forEach((item) => {
-                item.addEventListener('click', function () {
-                    const targetId = this.getAttribute('data-target');
-                    const targetElement = document.getElementById(targetId);
-                    if (targetElement) {
-                        targetElement.scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
-            });
-        </script>
+        <script type="text/javascript" src="./js/section_highlight.js"></script>
+        <script type="text/javascript" src="./js/mobile_nav.js"></script>
+        <script type="text/javascript" src="./js/change_color_based_on_system_mode.js"></script>
     </body>
 </html>
